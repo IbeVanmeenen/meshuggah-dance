@@ -1,0 +1,52 @@
+<!doctype html>
+<!--[if lte IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gte IE 9]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Startkit by @IbeVanmeenen">
+
+    <link rel="stylesheet" href="dist/css/style.min.css">
+
+    <link rel="prefetch-dns" href="https://www.youtube.com/">
+    <link rel="prefetch-dns" href="https://vjnblq-ch3301.files.1drv.com/">
+
+    <title>Meshuggah Dance</title>
+</head>
+<body id="body" class="loading">
+    <img src="dist/img/meshuggah_dance.svg" class="loading__logo">
+
+    <div class="loader">
+        <div class="loader__ani"></div>
+        <span id="loader-progress" class="loader__progress">0%</span>
+    </div>
+
+    <main role="main">
+        <header class="main-header">
+            <h1 class="main-header__head">Meshuggah Dance</h1>
+            <span class="main-header__helper">Click anywhere to go to the next movie</span>
+        </header>
+        <div id="yt-container" class="yt-container">
+            <div id="yt-iframe"></div>
+        </div>
+
+        <div id="vid-container" class="vid-container">
+            <video id="main-video" volume="0" class="vid-container__video">
+        </div>
+
+        <button type="button" id="click-frame" class="click-frame">
+            <span class="click-frame__helper">
+                All over the world, people are dancing to Meshuggah. <br>
+                But who can blame them, that shit is danceable! <br><br>
+                Building up the vibe, hold on...
+            </span>
+            <span class="click-frame__click">
+                GO! click anywhere to get a look.
+            </span>
+        </button>
+    </main>
+
+    <script src="dist/js/footer.min.js"></script>
+</body>
+</html>

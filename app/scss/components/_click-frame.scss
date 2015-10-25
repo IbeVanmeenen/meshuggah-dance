@@ -1,0 +1,52 @@
+.click-frame {
+    opacity: 0;
+    pointer-events: none;
+
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: none;
+    border: 0;
+
+    -webkit-appearance: none;
+}
+
+.click-frame__helper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    padding: 1em 4em;
+
+    background: rgba(0, 0, 0, .8);
+    color: $white;
+
+    opacity: 0;
+    transform: translate(-50%, -40%);
+
+    transition: opacity .3s ease, transform .3s ease;
+}
+
+.click-frame__click {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    padding: 1em 4em;
+
+    background: rgba(0, 0, 0, .8);
+    color: $white;
+
+    opacity: 0;
+    transform: translate(-50%, -40%);
+
+    transition: opacity .3s ease, transform .3s ease;
+    transition-delay: .3s;
+}

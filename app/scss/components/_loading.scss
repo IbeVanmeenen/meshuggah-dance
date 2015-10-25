@@ -1,0 +1,167 @@
+.loading {
+    background: #000;
+}
+
+.yt-started {
+    .yt-container {
+        opacity: .5;
+    }
+
+    .loader {
+        display: none;
+    }
+
+    .click-frame {
+        opacity: 1;
+    }
+
+    .click-frame__helper {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    .loading__logo {
+        transform: translate3d(-50%, -80%, 0);
+        opacity: 0;
+    }
+}
+
+.yt-started--play {
+
+    .click-frame {
+        pointer-events: auto;
+    }
+
+    .click-frame__helper {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+    }
+
+    .click-frame__click {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    .main-header__helper {
+        opacity: 1;
+    }
+
+    .loading__logo {
+        display: none;
+    }
+}
+
+
+.party-started {
+
+    .yt-container {
+        opacity: 0;
+    }
+
+    .click-frame__helper {
+        display: none;
+    }
+
+    .click-frame__click {
+        display: none;
+    }
+
+    .vid-container__video {
+        opacity: 1;
+    }
+}
+
+
+.loading__logo {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+
+    width: 60vw;
+    max-width: 18rem;
+
+    transform: translate3d(-50%, -50%, 0);
+    transition: transform .6s ease, opacity .5s ease;
+}
+
+.loader {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.loader__progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    color: $white;
+    font-size: .5rem;
+
+    opacity: .4;
+
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.loader__ani, .loader__ani::before, .loader__ani::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-left-color: rgba(255, 255, 255, .4);
+    border-radius: 999px;
+    box-sizing: content-box;
+}
+.loader__ani {
+    top: 60%;
+}
+
+.loader__ani {
+    margin: -25px 0 0 -25px;
+    height: 50px;
+    width: 50px;
+    animation: animation-rotate 1000ms linear infinite;
+}
+
+.loader__ani::before {
+  content: "";
+  margin: -23px 0 0 -23px;
+  height: 44px;
+  width: 44px;
+  animation: animation-rotate 1000ms linear infinite;
+}
+
+.loader__ani::after {
+  content: "";
+  margin: -29px 0 0 -29px;
+  height: 56px;
+  width: 56px;
+  animation: animation-rotate 2000ms linear infinite;
+}
+
+@-webkit-keyframes animation-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes animation-rotate {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes animation-rotate {
+  100% {
+    -o-transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
