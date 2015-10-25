@@ -92,11 +92,16 @@ var chapters = [
     {
         'name' : 'soul-3',
         'start' : '629',
-        'stop' : '665.24'
+        'stop' : '691.24'
     },
     {
         'name' : 'bambi',
-        'start' : '666',
-        'stop' : '703.24'
+        'start' : '692',
+        'stop' : '729.24'
+    },
+    {
+        'name' : 'chinea',
+        'start' : '730',
+        'stop' : '744.24'
     }
 ];

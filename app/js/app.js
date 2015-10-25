@@ -97,10 +97,11 @@ danceparty.app = function(undefined) {
     // Load main video
     loadMainVideo = function() {
         var source = document.createElement('source');
-        source.src = 'dist/video/edited/full-xs.mp4';
+        // source.src = 'dist/video/edited/full-xs.mp4';
         // source.src = 'https://vjnblq-ch3301.files.1drv.com/y3meZoYzBtnlmx68ii0QJk4sDrpm3jx8xykUKWN-UnOrELYonP50CKLE77L6iXqNqtUhq9jI9RlKdrVg_5u_Y1bd-UqS0gnpkXDDc_5Kw0WgeEP7W6ff56COLoMtbmCpPcNNSi1f59bZ4dK1ukAHpnmCA/full-sm.mp4?psid=1?&videoformat=dash&part=index&pretranscode=0&transcodeahead=0';
         // source.src = 'https://drive.google.com/file/d/0B8Gzpe7fYcWRdlB5akJWTG14VjQ/view?usp=sharing';
         // source.src = 'https://docs.google.com/uc?id=0B8Gzpe7fYcWRdlB5akJWTG14VjQ&export=download';
+        source.src = 'https://s3.eu-central-1.amazonaws.com/meshuggah-dance/full-sm.mp4';
         source.type = 'video/mp4';
 
         videoElement.appendChild(source);
