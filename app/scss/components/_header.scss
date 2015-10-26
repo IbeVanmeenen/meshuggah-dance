@@ -14,13 +14,36 @@
 .main-header__head {
     float: left;
     margin: 0;
+}
 
-    font-size: .6rem;
-    font-weight: bold;
-    line-height: 2rem;
-    text-transform: uppercase;
-    color: $white;
-    letter-spacing: .02em;
+.main-header__head__img {
+    display: block;
+    height: 1rem;
+    width: auto;
+
+    opacity: .4;
+}
+
+.main-header__anata {
+    position: absolute;
+    top: -.5rem;
+    left: 50%;
+    display: block;
+
+    opacity: .4;
+
+    transform: tranlate(-50%, 0);
+    transition: opacity .3s ease;
+
+    &:hover, &:focus {
+        opacity: 1;
+    }
+}
+
+.main-header__anata__img {
+    display: block;
+    height: 1.5rem;
+    width: auto;
 }
 
 .main-header__helper {

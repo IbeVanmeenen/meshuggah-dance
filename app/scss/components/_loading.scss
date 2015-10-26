@@ -43,7 +43,7 @@
     }
 
     .main-header__helper {
-        opacity: 1;
+        opacity: .4;
     }
 
     .loading__logo {
@@ -54,8 +54,13 @@
 
 .party-started {
 
-    .yt-container {
-        opacity: 0;
+    .yt-holder {
+        position: absolute;
+        top: 0;
+        right: 2rem;
+
+        width: 5rem;
+        height: 5rem;
     }
 
     .click-frame__helper {

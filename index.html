@@ -15,7 +15,7 @@
     <title>Meshuggah Dance</title>
 </head>
 <body id="body" class="loading">
-    <img src="dist/img/meshuggah_dance.svg" class="loading__logo">
+    <img src="dist/img/meshuggah_dance.svg" alt="Meshuggah Dance" class="loading__logo">
 
     <div class="loader">
         <div class="loader__ani"></div>
@@ -24,11 +24,19 @@
 
     <main role="main">
         <header class="main-header">
-            <h1 class="main-header__head">Meshuggah Dance</h1>
+            <h1 class="main-header__head">
+                <img src="dist/img/meshuggah_dance-horz.svg" alt="Meshuggah Dance" class="main-header__head__img">
+            </h1>
+            <a href="#" class="main-header__anata">
+                <img src="dist/img/anatacreative-logo.svg" alt="Anata Creative" class="main-header__anata__img">
+            </a>
             <span class="main-header__helper">Click anywhere to go to the next movie</span>
         </header>
-        <div id="yt-container" class="yt-container">
-            <div id="yt-iframe"></div>
+
+        <div class="yt-holder">
+            <div id="yt-container" class="yt-container">
+                <div id="yt-iframe"></div>
+            </div>
         </div>
 
         <div id="vid-container" class="vid-container">
@@ -37,12 +45,12 @@
 
         <button type="button" id="click-frame" class="click-frame">
             <span class="click-frame__helper">
-                All over the world, people are dancing to Meshuggah. <br>
-                But who can blame them, that shit is danceable! <br><br>
+                All over the world, people are dancing the Meshuggah dance. <br>
+                But who can blame them? <br><br>
                 Building up the vibe, hold on...
             </span>
             <span class="click-frame__click">
-                GO! click anywhere to get a look.
+                GO! Click anywhere to get a look.
             </span>
         </button>
     </main>

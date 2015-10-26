@@ -10,7 +10,7 @@
 
 .vid-container__video {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
 
     display: block;
@@ -20,7 +20,7 @@
     margin: 0;
     opacity: 0;
 
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, 0, 0);
 }
 
 
