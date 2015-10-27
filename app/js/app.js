@@ -78,18 +78,19 @@ danceparty.app = function(undefined) {
     loadMainVideoProgress = function() {
 
         if(videoElement.duration) {
-            var percent = (videoElement.buffered.end(0)/videoElement.duration) * 100;
+            var percent = (parseInt(videoElement.buffered.end(0),10)/parseInt(videoElement.duration,10)) * 100;
+            percent = parseInt(percent, 10);
 
-            loaderProgress.innerHTML = parseInt(percent, 10) + '%';
+            loaderProgress.innerHTML = percent + '%';
 
-            if( percent >= 100 && !startYtVideo) {
+            if(percent >= 100 && !startYtVideo) {
                 videoElement.removeEventListener('progress', loadMainVideoProgress, false);
                 videoElement.currentTime = 0;
                 startYtVideo = true;
                 body.classList.add('show-start-btn');
+            } else {
+                videoElement.currentTime++;
             }
-
-            videoElement.currentTime++;
         }
     };
 

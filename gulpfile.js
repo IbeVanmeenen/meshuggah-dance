@@ -109,14 +109,14 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
     return gulp.src(config.js)
         // Uglify
-        .pipe(plugins.uglify({
-            mangle: {
-                except: ['jQuery']
-            }
-        }))
-        .on('error', function(err) {
-            errorLogger('Javascript Error', err.message);
-        })
+        // .pipe(plugins.uglify({
+            // mangle: {
+                // except: ['jQuery']
+            // }
+        // }))
+        // .on('error', function(err) {
+            // errorLogger('Javascript Error', err.message);
+        // })
 
         // Concat
         .pipe(plugins.concat('footer.min.js'))
