@@ -13,7 +13,7 @@ danceparty.app = function(undefined) {
 
     var body;
 
-    var clickFrame, videoElement, loaderProgress;
+    var clickFrame, videoElement, startBtn, loaderProgress;
 
     var ytPlayer,
         ytStart, ytOnPlayerReady, ytOnPlayerStateChange;
@@ -86,7 +86,7 @@ danceparty.app = function(undefined) {
                 videoElement.removeEventListener('progress', loadMainVideoProgress, false);
                 videoElement.currentTime = 0;
                 startYtVideo = true;
-                ytStart();
+                body.classList.add('show-start-btn');
             }
 
             videoElement.currentTime++;
@@ -97,10 +97,6 @@ danceparty.app = function(undefined) {
     // Load main video
     loadMainVideo = function() {
         var source = document.createElement('source');
-        // source.src = 'dist/video/edited/full-xs.mp4';
-        // source.src = 'https://vjnblq-ch3301.files.1drv.com/y3meZoYzBtnlmx68ii0QJk4sDrpm3jx8xykUKWN-UnOrELYonP50CKLE77L6iXqNqtUhq9jI9RlKdrVg_5u_Y1bd-UqS0gnpkXDDc_5Kw0WgeEP7W6ff56COLoMtbmCpPcNNSi1f59bZ4dK1ukAHpnmCA/full-sm.mp4?psid=1?&videoformat=dash&part=index&pretranscode=0&transcodeahead=0';
-        // source.src = 'https://drive.google.com/file/d/0B8Gzpe7fYcWRdlB5akJWTG14VjQ/view?usp=sharing';
-        // source.src = 'https://docs.google.com/uc?id=0B8Gzpe7fYcWRdlB5akJWTG14VjQ&export=download';
         source.src = 'https://s3.eu-central-1.amazonaws.com/meshuggah-dance/full-sm.mp4';
         source.type = 'video/mp4';
 
@@ -118,7 +114,7 @@ danceparty.app = function(undefined) {
             playNextChapter();
         }
 
-        window.setTimeout(timer, 521.73913);
+        window.setTimeout(timer, 521.73910);
     };
 
 
@@ -187,9 +183,14 @@ danceparty.app = function(undefined) {
         body = document.getElementById('body');
         clickFrame = document.getElementById('click-frame');
         loaderProgress = document.getElementById('loader-progress');
+        startBtn = document.getElementById('start-btn');
 
         videoElement = document.getElementById('main-video');
         videoElement.volume = 0;
+
+        startBtn.addEventListener('click', function(e) {
+            ytStart();
+        }, false);
     }();
 };
 
@@ -207,76 +208,3 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 function onYouTubeIframeAPIReady() {
     danceparty.app.initYoutube();
 };
-
-
-
-
-
-
-
-// Play Next
-// playNextVideo = function() {
-//     nextVideoWaiting = false;
-//
-//     nextVideo.play();
-//
-//     if (isClick) {
-//         isClick = false;
-//         if (first) {
-//             lastVideo = nextVideo;
-//             first = false;
-//         } else {
-//             lastVideo.remove();
-//             lastVideo = nextVideo;
-//         }
-//
-//         if (currentIndex === 18) {
-//             currentIndex = 0;
-//         } else {
-//             currentIndex += 1;
-//         }
-//
-//         clickAllowed = true;
-//     }
-// };
-
-
-// Video Loop
-// startVideo = function() {
-//     timer();
-//
-//     body.classList.add('yt-started--play');
-//
-//     clickFrame.addEventListener('click', function(e) {
-//
-//         if (clickAllowed) {
-//             clickAllowed = false;
-//             isClick = true;
-//
-//             e.preventDefault();
-//
-//             if (first) {
-//                 body.classList.add('party-started');
-//             }
-//
-//             nextVideo = document.createElement('video');
-//             vidFrame.appendChild(nextVideo);
-//
-//             nextVideo.src = videoUrls[currentIndex];
-//             nextVideo.volume = 0;
-//             nextVideo.loop = true;
-//             nextVideo.preload = 'auto';
-//             nextVideo.classList.add('vid-container__video');
-//
-//             nextVideo.oncanplay = function() {
-//                 nextVideoWaiting = true;
-//             };
-//
-//             nextVideo.onended = function () {
-//                 this.currentTime = 0;
-//                 this.play();
-//             };
-//         }
-//
-//     });
-// };

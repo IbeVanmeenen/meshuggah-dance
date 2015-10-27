@@ -2,6 +2,17 @@
     background: #000;
 }
 
+.show-start-btn {
+
+    .loader__btn {
+        display: block;
+    }
+
+    .loader__ani {
+        display: none;
+    }
+}
+
 .yt-started {
     .yt-container {
         opacity: .5;
@@ -90,11 +101,44 @@
 }
 
 .loader {
+    z-index: 999;
     position: absolute;
     top: 60%;
     left: 50%;
 
     transform: translate3d(-50%, -50%, 0);
+}
+
+.loader__btn {
+    z-index: 100;
+    position: relative;
+
+    display: none;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+
+    background: #ccc;
+    border: 0;
+    text-transform: uppercase;
+    border-radius: 100%;
+
+    transition: background .3s ease;
+
+    &:hover, &:focus {
+        background: #fff;
+    }
+}
+
+.loader__btn__icon {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+
+    display: block;
+    line-height: 1;
+    text-align: center;
 }
 
 .loader__progress {
